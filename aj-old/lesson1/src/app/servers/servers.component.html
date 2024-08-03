@@ -1,9 +1,20 @@
 <p>servers works!</p>
-<div class="container">
-  <div class="row">
-    <div class="col-xs-6">A</div>
-    <div class="col-xs-6">B</div>
-  </div>
-</div>
-
 <app-server></app-server>
+<hr>
+<p>{{ serverCreationStatus }}</p>
+<h4>Event Binding</h4>
+<input 
+  type="text"
+  (input)="onUpdateServerName($event)">
+<hr>
+<h4>Two way Binding</h4>
+<input 
+  type="text"
+  [(ngModel)]="serverName">
+<p>{{ serverName }}</p>
+<button
+  type="button"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()">Add Server</button>
+<p [innerText]="allowNewServer"></p>
+<hr>

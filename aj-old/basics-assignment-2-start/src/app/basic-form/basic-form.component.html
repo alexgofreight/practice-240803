@@ -1,0 +1,7 @@
+<p>basic-form works!</p>
+
+User: <input type="text" [(ngModel)]="userName">
+<button 
+  type="button" 
+  [disabled]="userName===''"
+  (click)="onSend()">Send</button>
