@@ -1,0 +1,14 @@
+<p>article works!</p>
+
+<button type="button" (click)="toggleDetail()">Display Details</button>
+<p *ngIf="isSecretPassword">Secret Password = {{ isSecretPassword }}</p>
+<ul>
+  <li 
+    *ngFor="let log of logs; index as i"
+    [ngStyle]="{
+      'background-color': i > 4? 'blue' : 'white'
+    }"
+    [ngClass]="{
+      'white-text': i > 4
+    }">{{ log }}</li>
+</ul>

@@ -1,0 +1,8 @@
+<p>condition works!</p>
+<p *ngIf="isHappy;else no_happy">Happy</p>
+<p>OK</p>
+<ng-template #no_happy>
+  <p>Not Happy</p>
+</ng-template>
+<hr>
+<p [ngStyle]="{'background-color': getColor()}">Hello</p>
